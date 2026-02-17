@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+.input {
+  @apply border border-gray-300 p-3 rounded-xl w-full focus:ring-2 focus:ring-indigo-500 outline-none transition;
+}
+
+.file-input {
+  @apply border border-dashed border-gray-400 p-3 rounded-xl w-full bg-gray-50 cursor-pointer;
+}
