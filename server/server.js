@@ -9,7 +9,17 @@ const mongoose = require("mongoose");
 const User = require("./models/User");
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173",
+      "https://bank-brown-eight.vercel.app"
+    ],
+    methods: ["GET", "POST"],
+    credentials: true,
+  })
+);
+
 app.use(express.json({ limit: "10mb" }));
 
 // ================= MONGODB CONNECTION =================

@@ -100,6 +100,8 @@ alert("Submitted Successfully");
             <option>India</option>
             <option>USA</option>
             <option>UK</option>
+            <option>HongKong</option>
+            <option>Singapore</option>
           </select>
 
         </div>
