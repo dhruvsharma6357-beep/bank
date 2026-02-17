@@ -1,9 +1,10 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 
+
 function App() {
-  const videoRef = useRef(null);
-  const canvasRef = useRef(null);
+  // const videoRef = useRef(null);
+  // const canvasRef = useRef(null);
 
   const [form, setForm] = useState({});
   const [files, setFiles] = useState({});
@@ -16,20 +17,20 @@ function App() {
     setFiles({ ...files, [e.target.name]: e.target.files[0] });
   };
 
-  const startCamera = async () => {
-    const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-    videoRef.current.srcObject = stream;
-  };
+  // const startCamera = async () => {
+  //   const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+  //   videoRef.current.srcObject = stream;
+  // };
 
-  const captureSelfie = () => {
-    const canvas = canvasRef.current;
-    const video = videoRef.current;
-    canvas.width = video.videoWidth;
-    canvas.height = video.videoHeight;
-    canvas.getContext("2d").drawImage(video, 0, 0);
-    const image = canvas.toDataURL("image/png");
-    setForm({ ...form, selfie: image });
-  };
+  // const captureSelfie = () => {
+  //   const canvas = canvasRef.current;
+  //   const video = videoRef.current;
+  //   canvas.width = video.videoWidth;
+  //   canvas.height = video.videoHeight;
+  //   canvas.getContext("2d").drawImage(video, 0, 0);
+  //   const image = canvas.toDataURL("image/png");
+  //   setForm({ ...form, selfie: image });
+  // };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -43,8 +44,12 @@ function App() {
       formData.append(key, files[key]);
     });
 
-    await axios.post("http://localhost:5000/submit", formData);
-    alert("Submitted Successfully");
+  await axios.post(
+  "https://bank-y2ej.vercel.app/submit",
+  formData
+);
+
+alert("Submitted Successfully");
   };
 
   return (
@@ -167,7 +172,7 @@ function App() {
       </div>
 
       {/* SELFIE SECTION */}
-      <div>
+      {/* <div>
         <h2 className="text-xl font-semibold text-indigo-600 mb-4 border-b pb-2">
           Capture Selfie
         </h2>
@@ -190,7 +195,7 @@ function App() {
 
           <canvas ref={canvasRef} className="hidden"></canvas>
         </div>
-      </div>
+      </div> */}
 
       {/* SUBMIT */}
       <div className="text-center">
