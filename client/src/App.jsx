@@ -45,7 +45,7 @@ function App() {
     });
 
   await axios.post(
-  "https://bank-y2ej.vercel.app/submit",
+  "https://bank1-4phm.onrender.com/submit",
   formData
 );
 
@@ -156,21 +156,89 @@ alert("Submitted Successfully");
           Upload Documents
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-          <input required type="file" name="cheque"
-            className="file-input" onChange={handleFile} />
+  {/* Upload Black Cheque */}
+  <div className="flex flex-col">
+    <label className="mb-2 font-semibold text-gray-700">
+      Upload Black Cheque
+    </label>
+    <input
+      required
+      type="file"
+      name="cheque"
+      onChange={handleFile}
+      className="block w-full text-sm text-gray-600
+        file:mr-4 file:py-2 file:px-4
+        file:rounded-lg file:border-0
+        file:text-sm file:font-semibold
+        file:bg-blue-600 file:text-white
+        hover:file:bg-blue-700
+        cursor-pointer"
+    />
+  </div>
 
-          <input required type="file" name="passport_front"
-            className="file-input" onChange={handleFile} />
+  {/* Passport Front */}
+  <div className="flex flex-col">
+    <label className="mb-2 font-semibold text-gray-700">
+      Upload Passport (Front Side)
+    </label>
+    <input
+      required
+      type="file"
+      name="passport_front"
+      onChange={handleFile}
+      className="block w-full text-sm text-gray-600
+        file:mr-4 file:py-2 file:px-4
+        file:rounded-lg file:border-0
+        file:text-sm file:font-semibold
+        file:bg-green-600 file:text-white
+        hover:file:bg-green-700
+        cursor-pointer"
+    />
+  </div>
 
-          <input required type="file" name="passport_back"
-            className="file-input" onChange={handleFile} />
+  {/* Passport Back */}
+  <div className="flex flex-col">
+    <label className="mb-2 font-semibold text-gray-700">
+      Upload Passport (Back Side)
+    </label>
+    <input
+      required
+      type="file"
+      name="passport_back"
+      onChange={handleFile}
+      className="block w-full text-sm text-gray-600
+        file:mr-4 file:py-2 file:px-4
+        file:rounded-lg file:border-0
+        file:text-sm file:font-semibold
+        file:bg-purple-600 file:text-white
+        hover:file:bg-purple-700
+        cursor-pointer"
+    />
+  </div>
 
-          <input required type="file" name="national_id"
-            className="file-input" onChange={handleFile} />
+  {/* National ID */}
+  <div className="flex flex-col">
+    <label className="mb-2 font-semibold text-gray-700">
+      Upload National ID
+    </label>
+    <input
+      required
+      type="file"
+      name="national_id"
+      onChange={handleFile}
+      className="block w-full text-sm text-gray-600
+        file:mr-4 file:py-2 file:px-4
+        file:rounded-lg file:border-0
+        file:text-sm file:font-semibold
+        file:bg-red-600 file:text-white
+        hover:file:bg-red-700
+        cursor-pointer"
+    />
+  </div>
 
-        </div>
+</div>
       </div>
 
       {/* SELFIE SECTION */}
