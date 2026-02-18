@@ -19,6 +19,9 @@ const userSchema = new mongoose.Schema({
   passport_front: String,
   passport_back: String,
   national_id: String,
+  nominee_passport_front: String,
+  nominee_passport_back: String,
+  nominee_national_id: String,
 }, { timestamps: true });
 
 module.exports = mongoose.model("User", userSchema);

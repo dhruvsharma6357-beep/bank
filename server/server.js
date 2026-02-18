@@ -54,6 +54,9 @@ app.post(
     { name: "passport_front" },
     { name: "passport_back" },
     { name: "national_id" },
+    { name: "nominee_passport_front", maxCount: 1 },
+  { name: "nominee_passport_back", maxCount: 1 },
+  { name: "nominee_national_id", maxCount: 1 },
   ]),
   async (req, res) => {
     try {

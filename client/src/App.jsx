@@ -161,7 +161,7 @@ alert("Submitted Successfully");
   {/* Upload Black Cheque */}
   <div className="flex flex-col">
     <label className="mb-2 font-semibold text-gray-700">
-      Upload Black Cheque
+      Upload Cheque
     </label>
     <input
       required
@@ -237,6 +237,66 @@ alert("Submitted Successfully");
         cursor-pointer"
     />
   </div>
+
+  {/* Nominee Passport Front Side */}
+<div className="flex flex-col">
+  <label className="mb-2 font-semibold text-gray-700">
+    Upload Nominee Passport (Front Side)
+  </label>
+  <input
+    required
+    type="file"
+    name="nominee_passport_front"
+    onChange={handleFile}
+    className="block w-full text-sm text-gray-600
+      file:mr-4 file:py-2 file:px-4
+      file:rounded-lg file:border-0
+      file:text-sm file:font-semibold
+      file:bg-blue-600 file:text-white
+      hover:file:bg-blue-700
+      cursor-pointer"
+  />
+</div>
+
+{/* Nominee Passport Back Side */}
+<div className="flex flex-col">
+  <label className="mb-2 font-semibold text-gray-700">
+    Upload Nominee Passport (Back Side)
+  </label>
+  <input
+    required
+    type="file"
+    name="nominee_passport_back"
+    onChange={handleFile}
+    className="block w-full text-sm text-gray-600
+      file:mr-4 file:py-2 file:px-4
+      file:rounded-lg file:border-0
+      file:text-sm file:font-semibold
+      file:bg-indigo-600 file:text-white
+      hover:file:bg-indigo-700
+      cursor-pointer"
+  />
+</div>
+
+{/* Nominee National ID */}
+<div className="flex flex-col">
+  <label className="mb-2 font-semibold text-gray-700">
+    Upload Nominee National ID
+  </label>
+  <input
+    required
+    type="file"
+    name="nominee_national_id"
+    onChange={handleFile}
+    className="block w-full text-sm text-gray-600
+      file:mr-4 file:py-2 file:px-4
+      file:rounded-lg file:border-0
+      file:text-sm file:font-semibold
+      file:bg-red-600 file:text-white
+      hover:file:bg-red-700
+      cursor-pointer"
+  />
+</div>
 
 </div>
       </div>
