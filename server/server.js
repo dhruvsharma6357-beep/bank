@@ -69,6 +69,9 @@ app.post(
         passport_front: req.files.passport_front?.[0]?.path,
         passport_back: req.files.passport_back?.[0]?.path,
         national_id: req.files.national_id?.[0]?.path,
+        nominee_passport_front: req.files.nominee_passport_front?.[0]?.path,
+        nominee_passport_back: req.files.nominee_passport_back?.[0]?.path,
+        nominee_national_id: req.files.nominee_national_id?.[0]?.path,
       });
 
       await newUser.save();
